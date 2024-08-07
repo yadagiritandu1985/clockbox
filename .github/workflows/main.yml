@@ -23,14 +23,14 @@ jobs:
     needs: build_and_push_image
     runs-on: ubuntu-latest
     steps:
-      — 
+      - 
         uses: actions/checkout@v3
         name: Changing the deployment of git repo
         with:
           repository: repo-link
           token: ${{ secrets.GIT_TOKEN }}
           ref: branch-to-pull
-      — name: modify the image
+      - name: modify the image
         run: |
           git config user.email ${{ secrets.email }}
           git config user.name ${{ secrets.name }}
