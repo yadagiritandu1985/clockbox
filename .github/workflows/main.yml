@@ -2,8 +2,6 @@ name: hello-world
 on: push
 jobs:
   my-job:
-    env:
-      DOCKERHUB_USERNAME: 'yadagiritandu'
     runs-on: ubuntu-latest
     steps:
       -
